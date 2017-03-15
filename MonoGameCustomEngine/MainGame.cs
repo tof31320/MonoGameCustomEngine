@@ -1,18 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameCustomEngine.Core;
 
 namespace MonoGameCustomEngine
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class MainGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        // Customs objects
+        GameStateController gameStateController;
+        AssetManager assetManager;
+
+        public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -26,7 +31,8 @@ namespace MonoGameCustomEngine
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            gameStateController = new GameStateController();
+            assetManager = new AssetManager();
 
             base.Initialize();
         }
