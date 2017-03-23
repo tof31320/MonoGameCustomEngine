@@ -56,9 +56,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\Transform.cs" />
     <Compile Include="Core\AssetManager.cs" />
+    <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\GameState.cs" />
     <Compile Include="Core\GameStateController.cs" />
+    <Compile Include="Core\GameComponent.cs" />
     <Compile Include="MainGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
